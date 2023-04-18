@@ -1,19 +1,4 @@
-// Affine Cipher
 
-// This code was written by Tyler Akins and is placed in the public domain.
-// It would be nice if this header remained intact.  http://rumkin.com
-
-// Requires util.js
-
-
-// Perform a Affine transformation on the text
-// encdec = -1 for decode, 1 for encode (kinda silly, but kept it like this
-//    to be the same as the other encoders)
-// text = the text to encode/decode
-// inc = how far to shift the letters.
-// key = the key to alter the alphabet
-// alphabet = The alphabet to use if not A-Z
-//ALPHABET is out of order because Christensen says a starts at 1
 function affine(mult, inc, text, isDecrypt = "encrypt", alphabet = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ') {
     var output = "";
 
@@ -23,7 +8,6 @@ function affine(mult, inc, text, isDecrypt = "encrypt", alphabet = 'ABCDEFGHIJKL
     mult = mult * 1;
     inc = inc * 1;
 
-    // Popup to warn of incorrect keys and to avoid infinite loops
     if (mult % 0 == 0 || mult % 27 == 0) {
         window.alert("The multiplicative key cannot be zero, an even number, or a multiple of 13 when decoding!");
         mult = 1;
