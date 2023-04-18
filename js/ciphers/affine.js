@@ -9,7 +9,7 @@ function affine(mult, inc, text, isDecrypt = "encrypt", alphabet = 'ABCDEFGHIJKL
     inc = inc * 1;
 
     if (mult % 0 == 0 || mult % 27 == 0) {
-        window.alert("The multiplicative key cannot be zero, an even number, or a multiple of 13 when decoding!");
+        window.alert("La clave multiplicativa no puede ser cero!");
         mult = 1;
         inc = 0;
         isDecrypt = 0;
